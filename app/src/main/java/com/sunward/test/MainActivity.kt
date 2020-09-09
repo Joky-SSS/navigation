@@ -63,8 +63,8 @@ class MainActivity : AppCompatActivity() {
         val options = TileOverlayOptions()
 // 构造显示瓦片图范围，当前为世界范围
 // 构造显示瓦片图范围，当前为世界范围
-        val northeast = LatLng(80.0, 180.0)
-        val southwest = LatLng(-80.0, -180.0)
+        val northeast = LatLng(113.189392090,28.259582520)
+        val southwest = LatLng(113.171539307,28.245849609)
         options.tileProvider(tileProvider)
                 .setPositionFromBounds(LatLngBounds.Builder().include(northeast).include(southwest).build())
 //向地图添加离线瓦片图对象
