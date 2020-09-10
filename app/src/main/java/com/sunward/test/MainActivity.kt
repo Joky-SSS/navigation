@@ -92,16 +92,13 @@ class MainActivity : AppCompatActivity() {
 
         bm.copyPixelsToBuffer(b)
 
-        val bytes = ByteArray(size)
-
-        try {
-            return b.array()
-//            b.get(bytes, 0, bytes.size)
+        return try {
+            b.array()
+    //            b.get(bytes, 0, bytes.size)
         } catch (e: BufferUnderflowException) {
             e.printStackTrace()
-            return null
+            null
         }
-        return bytes
     }
 
     fun getBitmapFromAsset(context: Context, filePath: String?): Bitmap? {
